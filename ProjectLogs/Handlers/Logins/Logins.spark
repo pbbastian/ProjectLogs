@@ -1,0 +1,22 @@
+﻿<viewdata model="ProjectLogs.Handlers.Logins.ViewModel" />
+<content:title>OpenId login</content:title>
+<ValidationErrors />
+<Form model="ProjectLogs.Handlers.Logins.Facebook.InputModel">
+    <div>
+        <button type="submit">
+            <span>Facebook</span>
+        </button>
+    </div>
+</Form>
+<Form model="ProjectLogs.Handlers.Logins.OpenId.InputModel">
+    <div>
+        <LabelFor property="OpenId" />
+        <InputFor property="OpenId" />
+    </div>
+    <div>
+        <button type="submit">
+            <span>Login</span>
+        </button>
+    </div>
+</Form>
+lolol

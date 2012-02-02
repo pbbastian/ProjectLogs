@@ -19,17 +19,12 @@ namespace ProjectLogs
         protected void Application_Start(object sender, EventArgs e)
         {
             var documentStore = new DocumentStore() { ConnectionStringName = "RavenDB" };
-
-            var container = new Container(c =>
-            {
-                c.For<DocumentStore>().Singleton().Use(documentStore);
-                c.For<IDocumentSession>().HttpContextScoped().Use(context => context.GetInstance<DocumentStore>().OpenSession());
-            });
+            var registry = new ProjectLogsRegistry(documentStore);
 
             // FubuApplication "guides" the bootstrapping of the FubuMVC
             // application
             FubuApplication.For<ProjectLogsFubuRegistry>()
-                .StructureMap(container)
+                .StructureMapObjectFactory(x => x.AddRegistry(registry))
                 .Bootstrap();
 
             // Ensure that no errors occurred during bootstrapping

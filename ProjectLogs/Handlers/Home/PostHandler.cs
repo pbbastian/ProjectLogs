@@ -5,11 +5,11 @@ using System.Web;
 
 namespace ProjectLogs.Handlers.Home
 {
-    public class GetHandler
+    public class PostHandler
     {
-        public HomeViewModel Execute(HomeRequestModel model)
+        public HomeViewModel Execute(HomeInputModel model)
         {
-            return new HomeViewModel { Message = "Standard message" };
+            return new HomeViewModel { Message = model.Message };
         }
     }
 }

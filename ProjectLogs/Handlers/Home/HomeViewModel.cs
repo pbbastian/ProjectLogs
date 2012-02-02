@@ -7,5 +7,6 @@ namespace ProjectLogs.Handlers.Home
 {
     public class HomeViewModel
     {
+        public string Message { get; set; }
     }
 }

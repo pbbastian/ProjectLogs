@@ -22,8 +22,8 @@ namespace ProjectLogs.Configuration
             ApplyHandlerConventions<HandlersMarker>();
 
             // Policies
-            Routes
-                .HomeIs<Handlers.Home.GetHandler>(h => h.Execute(new Handlers.Home.HomeRequestModel()));
+            //Routes
+            //    .HomeIs<Handlers.Home.GetHandler>(h => h.Execute(new Handlers.Home.HomeRequestModel()));
 
             this.UseSpark();
 

@@ -1,3 +1,17 @@
 ﻿<viewdata model="ProjectLogs.Handlers.Home.HomeViewModel" />
 <content:title>Home</content:title>
-AWW YEAH
+<ValidationErrors />
+${Model.Message}<br />
+<Form model="ProjectLogs.Handlers.Home.HomeInputModel">
+    <fieldset>
+        <div>
+            <LabelFor property="Message" />
+            <InputFor property="Message" />
+        </div>
+        <div>
+            <button type="submit">
+                <span>Create</span>
+            </button>
+        </div>
+    </fieldset>
+</Form>
